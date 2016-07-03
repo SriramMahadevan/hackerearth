@@ -1,0 +1,28 @@
+  
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line = br.readLine();
+        int N = Integer.parseInt(line);
+        for (int i = 0; i < N; i++) {
+        	int counter=0;
+             String input = br.readLine();
+             int M = Integer.parseInt(input);
+             for (int j = 1;j <= M;j++) {
+             	for (int k=1;k <= M ;k++) {
+             		if ((k ^ j) <= M && j != k && k > j){
+             			counter++;
+             		}
+             	}
+             }
+             System.out.println(counter);
+             
+        }
+        
+    }
+}
